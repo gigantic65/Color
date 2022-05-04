@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -53,7 +52,7 @@ def app():
 
     # Displays the dataset
     
-    st.sidebar.header('1. 학습 데이터 및 예측 모델 ')
+    st.sidebar.header('1. 데이터 및 모델 업로드 ')
     st.sidebar.markdown("<h5 style='text-align: center; color: black;'> 파일 자동 업로드 </h5>", unsafe_allow_html=True)
     
     st.subheader('**1. 학습 데이터 및 예측 모델**')
@@ -63,7 +62,7 @@ def app():
     #    def load_csv():
     #        csv = pd.read_csv(uploaded_file)
     #        return csv
-    df = pd.read_csv('https://raw.githubusercontent.com/gigantic65/Color/main/train.csv')
+    df = pd.read_csv('train.csv')
     
         
     x = list(df.columns[:-3])
@@ -104,12 +103,12 @@ def app():
             
     st.write('')   
             
-    st.write('**1.3 선정된 최적 예측 모델 :**')
+    st.write('**1.3 선정 예측 모델 :**')
     st.write(models)
     st.write('')
             
         
-    st.write('**1.4 예측모델 정확도 :**')
+    st.write('**1.4 예측 모델 정확도 :**')
     X = df[Selected_X]
     y = df[Selected_y]
             
@@ -233,14 +232,15 @@ def app():
 
     #st.sidebar.write('3.1 Predict Single Condition')
             
-    
-    st.sidebar.header('2. 색차 및 조색제 예측 선택')
+    st.sidebar.write('')
+    st.sidebar.write('')
+    st.sidebar.header('2. 예측 모델 선정')
                             
                 #st.subheader('**3. Model Prediction **')
                 #st.write('**3.1 Single Condition Prediction :**')
                 
     select = ['Select','색차 예측','조색제 예측']
-    selected = st.sidebar.selectbox("예측 모델 선정 : ", select)
+    selected = st.sidebar.selectbox("색차 예측 vs 조색제 예측: ", select)
 
 
                 

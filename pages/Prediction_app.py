@@ -63,7 +63,7 @@ def app():
     #    def load_csv():
     #        csv = pd.read_csv(uploaded_file)
     #        return csv
-    df = pd.read_csv('train.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/gigantic65/Color/main/train.csv')
     
         
     x = list(df.columns[:-3])

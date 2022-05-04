@@ -98,7 +98,7 @@ def app():
         return loaded_model
             
     
-    with open('https://raw.githubusercontent.com/Color/main/M_single.pickle', 'rb') as f:
+    with open('M_single.pickle', 'rb') as f:
         models = pickle.load(f)
     
             

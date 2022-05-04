@@ -166,7 +166,9 @@ def app():
         predictions2 = pd.DataFrame(predictions2)
     
     
-        R2.append('%f' %  round(sm.r2_score(y,predictions2),5))
+        R2.append('%f' %  round(sm.r2_score(y_test,predictions),5))
+        
+        R22.append('%f' %  round(sm.r2_score(y,predictions2),5))
 
    
                     
@@ -180,12 +182,13 @@ def app():
         st.write('Model Accuracy for Test data ($R^2$):')
             
         R2_mean = list(F_result3['R2_Mean'].values)
-        st.info( R2_mean[0] )
+        R2 = list(R2)
+        st.info( R2[0] )
                 
         st.write('Model Accuracy for Total data ($R^2$):')
                 
-        R2 = list(R2)
-        st.info( R2[0] )
+        R22 = list(R22)
+        st.info( R22[0] )
                         
    
                 

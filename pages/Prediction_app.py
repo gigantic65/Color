@@ -127,7 +127,6 @@ def app():
     MAE = []
     MSE = []
     R2 = []
-    R22 = []
 
 
 
@@ -167,9 +166,7 @@ def app():
         predictions2 = pd.DataFrame(predictions2)
     
     
-        R2.append('%f' %  round(sm.r2_score(y_test,predictions),5))
-        
-        R22.append('%f' %  round(sm.r2_score(y,predictions2),5))
+        R2.append('%f' %  round(sm.r2_score(y,predictions2),5))
 
    
                     
@@ -183,13 +180,12 @@ def app():
         st.write('Model Accuracy for Test data ($R^2$):')
             
         R2_mean = list(F_result3['R2_Mean'].values)
-        R2 = list(R2)
-        st.info( R2[0] )
+        st.info( R2_mean[0] )
                 
         st.write('Model Accuracy for Total data ($R^2$):')
                 
-        R22 = list(R22)
-        st.info( R22[0] )
+        R2 = list(R2)
+        st.info( R2[0] )
                         
    
                 
@@ -307,8 +303,23 @@ def app():
                     
             color_list = ['EP174(T)PTA-BLACK', 'EP174(T)PTA-BLUE', 'YE2308V', 'YE2326G', 'YE2330B', 'YE2335Y' ,'YE2336W'
                           ,'YE2339K', 'YE2347Y', 'YE2391R' ,'YM0407K', 'YM0410G', 'YM0410Y', 'YM0422Y', 'YM0430R', 'YX0305V', 'YX0315G'
-                          ,'YX0328Y' ,'YX0337R' ,'YX0397K'  ]
-            colors = st.multiselect('조색제 선택',color_list)
+                          ,'YX0328Y' ,'YX0337R' ,'YX0397K']
+            
+            color_list = pd.DataFrame(color_list,columns=['color'])
+                      
+            color_list2 = [X_train.columns.values]
+            color_list2 = pd.DataFrame(color_list2)
+            color_list2 = color_list2.T 
+            color_list2.columns = ['color']
+            new_color_list = []
+            
+            for color in color_list.iloc[:,0]:
+                for color2 in color_list2.iloc[:,0]:
+                    if color == color2:
+                        new_color_list.append(color)
+                       
+            
+            colors = st.multiselect('조색제 선택',new_color_list)
                     
             for color1 in colors:
                 value = st.number_input(color1,0.00, 1000.00, 0.0,format="%.2f")
@@ -402,7 +413,22 @@ def app():
             color_list = ['YE2204Y', 'YE2205V', 'YE2206B', 'YE2209R' ,'YE2210G', 'YE2210K', 'YE2231W' ,'YE2263Y'
                           ,'YF3401K', 'YF3401V' ,'YF3406B', 'YF3410K', 'YF3414Y', 'YF3416Y', 'YF3417G' ,'YF3429W'
                           ,'YF3430R' ]
-            colors = st.multiselect('조색제 선택',color_list)
+            
+            color_list = pd.DataFrame(color_list,columns=['color'])
+                      
+            color_list2 = [X_train.columns.values]
+            color_list2 = pd.DataFrame(color_list2)
+            color_list2 = color_list2.T 
+            color_list2.columns = ['color']
+            new_color_list = []
+            
+            for color in color_list.iloc[:,0]:
+                for color2 in color_list2.iloc[:,0]:
+                    if color == color2:
+                        new_color_list.append(color)
+                       
+            
+            colors = st.multiselect('조색제 선택',new_color_list)
                     
             for color1 in colors:
                 value = st.number_input(color1,0.00, 1000.00, 0.0,format="%.2f")
@@ -489,7 +515,24 @@ def app():
                     
             color_list = ['YE2326G', 'YE2339K', 'YE2347Y', 'YW2698K', 'YX1205V' ,'YX1210O', 'YX1222W', 'YX1228Y' ,'YX1229Y'
                               ,'YY1103G', 'YY1111R' ,'YY1112B', 'YY1116Y', 'YY1120K', 'YY1137W']
-            colors = st.multiselect('조색제 선택',color_list)
+            
+            
+            color_list = pd.DataFrame(color_list,columns=['color'])
+                      
+            color_list2 = [X_train.columns.values]
+            color_list2 = pd.DataFrame(color_list2)
+            color_list2 = color_list2.T 
+            color_list2.columns = ['color']
+            new_color_list = []
+            
+            for color in color_list.iloc[:,0]:
+                for color2 in color_list2.iloc[:,0]:
+                    if color == color2:
+                        new_color_list.append(color)
+                       
+            
+            colors = st.multiselect('조색제 선택',new_color_list)
+            
                     
             for color1 in colors:
                 value = st.number_input(color1,0.0, 1000.00, 0.0,format="%.2f")
@@ -598,7 +641,21 @@ def app():
                           ,'YE2339K', 'YE2347Y', 'YE2391R' ,'YM0407K', 'YM0410G', 'YM0410Y', 'YM0422Y', 'YM0430R', 'YX0305V', 'YX0315G'
                           ,'YX0328Y' ,'YX0337R' ,'YX0397K'  ]
             
-            colors = st.multiselect('조색제 선택',color_list)
+            color_list = pd.DataFrame(color_list,columns=['color'])
+                      
+            color_list2 = [X_train.columns.values]
+            color_list2 = pd.DataFrame(color_list2)
+            color_list2 = color_list2.T 
+            color_list2.columns = ['color']
+            new_color_list = []
+            
+            for color in color_list.iloc[:,0]:
+                for color2 in color_list2.iloc[:,0]:
+                    if color == color2:
+                        new_color_list.append(color)
+                       
+            
+            colors = st.multiselect('조색제 선택',new_color_list)
                     
                     
             name2=[]
@@ -746,7 +803,10 @@ def app():
                       
                 para4 = pd.concat([para4,predictions2], axis=1)
                     
-
+                
+                
+                para4 = para4.dropna()
+                
                 para4.sort_values(by='Final_De', ascending=True, inplace =True)
                     
                 para4 = para4.reset_index()
@@ -833,7 +893,21 @@ def app():
                           ,'YF3401K', 'YF3401V' ,'YF3406B', 'YF3410K', 'YF3414Y', 'YF3416Y', 'YF3417G' ,'YF3429W'
                           ,'YF3430R' ]
             
-            colors = st.multiselect('조색제 선택',color_list)
+            color_list = pd.DataFrame(color_list,columns=['color'])
+                      
+            color_list2 = [X_train.columns.values]
+            color_list2 = pd.DataFrame(color_list2)
+            color_list2 = color_list2.T 
+            color_list2.columns = ['color']
+            new_color_list = []
+            
+            for color in color_list.iloc[:,0]:
+                for color2 in color_list2.iloc[:,0]:
+                    if color == color2:
+                        new_color_list.append(color)
+                       
+            
+            colors = st.multiselect('조색제 선택',new_color_list)
                     
                     
             name2=[]
@@ -980,7 +1054,9 @@ def app():
                       
                 para4 = pd.concat([para4,predictions2], axis=1)
                     
-
+                
+                para4 = para4.dropna()
+                
                 para4.sort_values(by='Final_De', ascending=True, inplace =True)
                     
                 para4 = para4.reset_index()
@@ -1066,7 +1142,21 @@ def app():
             color_list = ['YE2326G', 'YE2339K', 'YE2347Y', 'YW2698K', 'YX1205V' ,'YX1210O', 'YX1222W', 'YX1228Y' ,'YX1229Y'
                               ,'YY1103G', 'YY1111R' ,'YY1112B', 'YY1116Y', 'YY1120K', 'YY1137W']
             
-            colors = st.multiselect('조색제 선택',color_list)
+            color_list = pd.DataFrame(color_list,columns=['color'])
+                      
+            color_list2 = [X_train.columns.values]
+            color_list2 = pd.DataFrame(color_list2)
+            color_list2 = color_list2.T 
+            color_list2.columns = ['color']
+            new_color_list = []
+            
+            for color in color_list.iloc[:,0]:
+                for color2 in color_list2.iloc[:,0]:
+                    if color == color2:
+                        new_color_list.append(color)
+                       
+            
+            colors = st.multiselect('조색제 선택',new_color_list)
                     
                     
             name2=[]
@@ -1179,13 +1269,12 @@ def app():
                 
                 para4 = pd.DataFrame(para4)
                     
-                    
+
                 para4.columns=list(Selected_X)
                     
                 st.write('**Selected Process Condtions:**')
                 
                 para4 = para4.dropna()
-                
                 
                 
                 

@@ -271,7 +271,7 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.2f")
+                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.3f")
                 Target_n.append('B_S')
                 Target_v.append(value1)
 
@@ -281,15 +281,15 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_L')
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_a')
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_b')
                 Target_v.append(value3)
                         
@@ -297,15 +297,15 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[0])
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[1])
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[2])
                 Target_v.append(value3)
                         
@@ -335,7 +335,7 @@ def app():
             colors = st.multiselect('조색제 선택',new_color_list)
                     
             for color1 in colors:
-                value = st.number_input(color1,0.00, 1000.00, 0.0,format="%.2f")
+                value = st.number_input(color1,0.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(color1)
                 Target_v.append(value)
                         
@@ -392,7 +392,7 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.2f")
+                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.3f")
                 Target_n.append('B_S')
                 Target_v.append(value1)
                 
@@ -402,15 +402,15 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_L')
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_a')
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_b')
                 Target_v.append(value3)
                     
@@ -418,15 +418,15 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[0])
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[1])
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[2])
                 Target_v.append(value3)
                         
@@ -454,7 +454,7 @@ def app():
             colors = st.multiselect('조색제 선택',new_color_list)
                     
             for color1 in colors:
-                value = st.number_input(color1,0.00, 1000.00, 0.0,format="%.2f")
+                value = st.number_input(color1,0.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(color1)
                 Target_v.append(value)
                         
@@ -506,7 +506,7 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.2f")
+                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.3f")
                 Target_n.append('B_S')
                 Target_v.append(value1)
                 
@@ -517,15 +517,15 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_L')
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_a')
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_b')
                 Target_v.append(value3)
                         
@@ -533,15 +533,15 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[0])
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[1])
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[2])
                 Target_v.append(value3)
                         
@@ -572,7 +572,7 @@ def app():
             
                     
             for color1 in colors:
-                value = st.number_input(color1,0.0, 1000.00, 0.0,format="%.2f")
+                value = st.number_input(color1,0.0, 1000.00, 0.0,format="%.3f")
                 Target_n.append(color1)
                 Target_v.append(value)
                         
@@ -637,7 +637,7 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.2f")
+                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.3f")
                 Target_n.append('B_S')
                 Target_v.append(value1)
                 
@@ -648,17 +648,17 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_L')
                 
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_a')
                 
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_b')
                 
                 Target_v.append(value3)
@@ -667,17 +667,17 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[0])
                 
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[1])
                 
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[2])
                 
                 Target_v.append(value3)
@@ -713,13 +713,13 @@ def app():
                     
             for color2 in colors:
                         
-                max1 = round(float(df[color2].max()),3)
-                min1 = round(float(df[color2].min()),3)
+                max1 = round(float(df[color2].max()),5)
+                min1 = round(float(df[color2].min()),5)
                         
                 rag1 = round(min1,3)
                 rag2 = round(max1,3)
                         
-                step = round((max1-min1)/20.0,3)
+                step = round((max1-min1)/20.0,5)
                         
                 value = st.slider(color2, min1, max1, (rag1,rag2), step)
                         
@@ -768,7 +768,7 @@ def app():
                     if para[0] == para[1]:
                         para = itertools.repeat(para[0],100)
                     else:
-                        para = np.arange(round(para[0],3), round(para[1]+((para[1]-para[0])/100.0),3), round((para[1]-para[0])/100.0,3))
+                        para = np.arange(round(para[0],5), round(para[1]+((para[1]-para[0])/100.0),5), round((para[1]-para[0])/100.0,5))
                             #st.write(para)
                     para2.append(para)
                             
@@ -902,7 +902,7 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.2f")
+                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.3f")
                 Target_n.append('B_S')
                 Target_v.append(value1)
                 
@@ -913,17 +913,17 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_L')
                 
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_a')
                 
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_b')
                 
                 Target_v.append(value3)
@@ -932,17 +932,17 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[0])
                 
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[1])
                 
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[2])
                 
                 Target_v.append(value3)
@@ -979,13 +979,13 @@ def app():
                     
             for color2 in colors:
                         
-                max1 = round(float(df[color2].max()),3)
-                min1 = round(float(df[color2].min()),3)
+                max1 = round(float(df[color2].max()),5)
+                min1 = round(float(df[color2].min()),5)
                         
-                rag1 = round(min1,3)
-                rag2 = round(max1,3)
+                rag1 = round(min1,5)
+                rag2 = round(max1,5)
                         
-                step = round((max1-min1)/20.0,3)
+                step = round((max1-min1)/20.0,5)
                         
                 value = st.slider(color2, min1, max1, (rag1,rag2), step)
                         
@@ -1034,7 +1034,7 @@ def app():
                     if para[0] == para[1]:
                         para = itertools.repeat(para[0],100)
                     else:
-                        para = np.arange(round(para[0],3), round(para[1]+((para[1]-para[0])/100.0),3), round((para[1]-para[0])/100.0,3))
+                        para = np.arange(round(para[0],5), round(para[1]+((para[1]-para[0])/100.0),5), round((para[1]-para[0])/100.0,5))
                             #st.write(para)
                     para2.append(para)
                             
@@ -1167,7 +1167,7 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.2f")
+                value1 = st.number_input(BS[0], 0.00, 100000.00, 0.0,format="%.3f")
                 Target_n.append('B_S')
                 Target_v.append(value1)
                 
@@ -1178,17 +1178,17 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Targets[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_L')
                 
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Targets[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_a')
                 
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Targets[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append('Std_b')
                 
                 Target_v.append(value3)
@@ -1197,17 +1197,17 @@ def app():
                     
             col1,col2,col3 = st.columns([1,1,1])
             with col1:
-                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.2f")
+                value1 = st.number_input(Initial[0], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[0])
                 
                 Target_v.append(value1)
             with col2:
-                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.2f")
+                value2 = st.number_input(Initial[1], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[1])
                 
                 Target_v.append(value2)
             with col3:
-                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.2f")
+                value3 = st.number_input(Initial[2], -1000.00, 1000.00, 0.0,format="%.3f")
                 Target_n.append(Initial[2])
                 
                 Target_v.append(value3)
@@ -1242,13 +1242,13 @@ def app():
                     
             for color2 in colors:
                         
-                max1 = round(float(df[color2].max()),3)
-                min1 = round(float(df[color2].min()),3)
+                max1 = round(float(df[color2].max()),5)
+                min1 = round(float(df[color2].min()),5)
                         
-                rag1 = round(min1,3)
-                rag2 = round(max1,3)
+                rag1 = round(min1,5)
+                rag2 = round(max1,5)
                         
-                step = round((max1-min1)/20.0,3)
+                step = round((max1-min1)/20.0,5)
                         
                 value = st.slider(color2, min1, max1, (rag1,rag2), step)
                         
@@ -1297,7 +1297,7 @@ def app():
                     if para[0] == para[1]:
                         para = itertools.repeat(para[0],100)
                     else:
-                        para = np.arange(round(para[0],3), round(para[1]+((para[1]-para[0])/100.0),3), round((para[1]-para[0])/100.0,3))
+                        para = np.arange(round(para[0],5), round(para[1]+((para[1]-para[0])/100.0),5), round((para[1]-para[0])/100.0,5))
                             #st.write(para)
                     para2.append(para)
                             
